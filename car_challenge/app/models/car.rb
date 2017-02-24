@@ -1,9 +1,12 @@
 class Car
-  def initialize(make, model, year, speed)
+  def initialize(make, model, year, speed, lights, parking_brake)
     @make = make
     @model = model
     @year = year
     @speed = speed
+    @lights = lights
+    @lights_status
+    @parking_brake = parking_brake
   end
 
   def car_name
@@ -27,8 +30,37 @@ class Car
     @speed += 10
   end
 
+  def brake
+    if @speed < 7
+      @speed = 0
+    else
+      @speed -= 7
+    end
+  end
+
   def get_speed
     @speed
   end
 
+  def light_switch
+    if @lights == true
+      @lights = false
+      @lights_status = "Off"
+    else
+      @lights = true
+      @lights_status = "On"
+    end
+  end
+
+  def get_lights
+    if @lights == true
+      @lights_status = "On"
+    else
+      @lights_status = "Off"
+    end
+  end
+
+  def get_parking_brake
+    @parking_brake_car
+  end
 end

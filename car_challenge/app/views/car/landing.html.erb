@@ -1,14 +1,18 @@
 <h1>Welcome to the Car Simulator</h1>
 
 <form class="car_input" action="landing" method="get">
+  <!-- input field for the make of the car -->
   <label for="make_id">Make:</label>
   <input type="text" id="make_id" name="make"/>
   </br>
+  <!-- Input field for the model of the car -->
   <label for="model_id">Model:</label>
   <input type="text" id="model_id" name="model" />
   <br/>
+  <!-- Input field fof the year of the car -->
   <label for="year_id">Year:</label>
   <input type="number" id="year_id" name="year" min="1893" max="2017" required/>
   <br/>
+  <!-- Button to trigger the car simulator -->
   <input type="submit" value="Simulate Car"/>
 </form>

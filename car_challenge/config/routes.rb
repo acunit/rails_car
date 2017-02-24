@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   get '/simulator/accelerate_car'
 
+  get '/simulator/brake_car'
+
+  get '/simulator/lights_car'
+
+  get '/simulator/parking_brake_car'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

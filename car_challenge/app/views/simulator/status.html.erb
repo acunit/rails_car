@@ -4,6 +4,26 @@
 
 <p>Speed: <%= @car_speed %> mph</p>
 
+<p>Lights: <%= @car_lights %></p>
+
+<!-- button for accelerating the car -->
 <form class="car_simulator" action="accelerate_car" method="get">
   <input type="submit" value="Accelerate"/>
+</form>
+
+<!-- button for braking the car -->
+<form class="" action="brake_car" method="get">
+  <input type="submit" value="Brake"/>
+</form>
+
+<!-- button for turning the lights on and off -->
+<form class="" action="lights_car" method="get">
+  <input type="submit" value="Light Switch"/>
+</form>
+
+<!-- radio buttons for the parking brake -->
+<form class="" action="parking_brake_car" method="get">
+  Parking Brake<br>
+  <input type="radio" name="parking_brake" value="Set" checked>Set
+  <input type="radio" name="parking_brake" value="Released"> Released
 </form>
