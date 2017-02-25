@@ -63,4 +63,12 @@ class Car
   def get_parking_brake
     @parking_brake_car
   end
+
+  def parking_brake
+    if @parking_brake == "set"
+      
+    end
+
+
+  end
 end

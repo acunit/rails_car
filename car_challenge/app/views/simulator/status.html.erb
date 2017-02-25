@@ -17,13 +17,25 @@
 </form>
 
 <!-- button for turning the lights on and off -->
-<form class="" action="lights_car" method="get">
+<form class="lights" action="lights_car" method="get">
   <input type="submit" value="Light Switch"/>
 </form>
 
 <!-- radio buttons for the parking brake -->
-<form class="" action="parking_brake_car" method="get">
+<form class="parking_brake" action="/simulator/parking_brake_car" method="get">
   Parking Brake<br>
-  <input type="radio" name="parking_brake" value="Set" checked>Set
-  <input type="radio" name="parking_brake" value="Released"> Released
+  <input id="set_parking_brake" name="parking_brake" type="radio" value="pbrake"/>
+  <label for="age_child">Set/Release</label>
 </form>
+
+<%= form_tag :action => 'parking_brake_car' do %>
+  <%= radio_button_tag(:parking_brake, "pbrake") %>
+  <%= label_tag(:set_parking_brake, "Set/Release") %>
+<% end %>
+
+<%= form_tag do %>
+  <%= check_box_tag(:pet_dog) %>
+  <%= label_tag(:pet_dog, "I own a dog") %>
+  <%= check_box_tag(:pet_cat) %>
+  <%= label_tag(:pet_cat, "I own a cat") %>
+<% end %>

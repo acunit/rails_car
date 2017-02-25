@@ -44,7 +44,7 @@ class SimulatorController < ApplicationController
     @car = YAML.load(session[:car])
     @car_speed = @car.get_speed
     @car_lights = @car.get_lights
-
+    @car_parking_brake = @car.parking_brake
     @car_parking_brake = @car.get_parking_brake
     session[:car] = @car.to_yaml
   end
