@@ -47,5 +47,6 @@ class SimulatorController < ApplicationController
     @car_parking_brake = @car.parking_brake
     @car_parking_brake = @car.get_parking_brake
     session[:car] = @car.to_yaml
+    redirect_to '/simulator/status'
   end
 end

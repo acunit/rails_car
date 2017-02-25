@@ -66,9 +66,9 @@ class Car
 
   def parking_brake
     if @parking_brake == "set"
-      
+      @parking_brake = "release"
+    else
+      @parking_brake = "set"
     end
-
-
   end
 end
